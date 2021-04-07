@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    /* display: inline-block; */
+}
+
+.white-div {
+    position: absolute;
+    color: #faebeb;
+    background-color: #faebeb;
+    width: 400px;
+    height: 400px;
+}
+
+.red-div {
+    position: relative;
+    color: #fa0303;
+    background-color: #fa0303;
+    width: 50%;
+    height: 50%;
+    /* left: 60%; */
+
+}
+
+/* .blue-div {
+    position: absolute;
+    color: #0404f8;
+    background-color: #0404f8;
+    width: 100px;
+    height: 100px;
+}
+
+.yellow-div {
+    position: absolute;
+    color: #fcf804;
+    background-color: #fcf804;
+    width: 50px;
+    height: 50px;
+} */

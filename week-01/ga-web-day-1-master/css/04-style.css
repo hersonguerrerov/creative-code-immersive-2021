@@ -1,0 +1,11 @@
+/* css/04-style.css */
+.my-custom-div {
+  background-color: #000000; 
+  padding: 20px;
+}
+
+.my-custom-paragraph {
+  color: #c383f2;
+  text-transform: uppercase;
+  font-size: 36px;
+}
