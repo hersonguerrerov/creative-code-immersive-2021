@@ -1,0 +1,40 @@
+<!-- /exercises/10-js-conditionals.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Fundamentals: Conditionals</title>
+    <script>
+      let user = {
+        name      : "Helga Pataki",
+        age       : 9,
+        hairColor : "Blonde",
+
+        // loveInterest is an object inside an object!
+        loveInterest: {
+          name      : "Arnold Shortman",
+          age       : 9,
+          hairColor : "Blonde"
+        }
+      }
+
+      // If-else example
+      if (user["loveInterest"]["name"] == "Arnold Shortman") {
+        user["loveInterest"]["nickname"] = "Football Head";
+        alert("Move it " + user["loveInterest"]["nickname"] + "!");                        
+      } else {
+        alert("does not love Arnold!");
+      }
+
+      // If - else-if - else example
+      if (user["age"] >= 9 && user["age"] < 13) {
+        alert("kid!")
+      } else if (user["age"] >= 13 && user["age"] < 20) {
+        alert("teenager!");
+      } else {
+        alert(user["name"] + "is: " + user["age"]);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

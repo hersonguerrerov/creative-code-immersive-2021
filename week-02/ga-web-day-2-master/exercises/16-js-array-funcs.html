@@ -1,0 +1,29 @@
+<!-- /exercises/16-js-array-funcs.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Fundamentals: Built-in Functions - Arrays</title>
+    <script>
+      // Array functions: adding to an array
+      let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+      words.push('bright');
+      alert(words);
+
+      // Array functions: filter, map, reduce, sort, etc
+      // These functions return new arrays
+      let filteredResults = words.filter(function(word) {
+        return word.length > 6;
+      });
+      
+      // Because filteredResult is an array, we can index it as well
+      if (filteredResults.length > 0) {
+        alert(filteredResults); 
+      } else {
+        alert("Nothing left after filtering!");
+      }
+     
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
