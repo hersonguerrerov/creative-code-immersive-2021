@@ -1,0 +1,40 @@
+.strip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pane {
+    display: inline-block;
+}
+
+css-doodle {
+    --rule-grid-1: (@grid: 1 / 16vw 50vh;
+            background: @multi(100, (repeating-conic-gradient(from @pn(-45deg, 45deg, 60deg,
+                            90deg, -90deg),
+                        @multi(50, (green, red,
+                                white, yellow))) @pn(0%, 100%) 100% / 400vmax 400vmax no-repeat));
+            filter: hue-rotate(180deg);
+            background-blend-mode: difference;
+
+        );
+
+    --rule-grid-2: (@grid: 1 / 16vw 50vh;
+            background: @multi(100, (repeating-conic-gradient(from @pn(-45deg, 45deg, 60deg,
+                            90deg, -90deg),
+                        @multi(50, (green, red,
+                                white, yellow))) @pn(0%, 100%) 100% / 400vmax 400vmax no-repeat));
+            filter: hue-rotate(180deg);
+            background-blend-mode: difference;
+        );
+
+    --rule-grid-3: (@grid: 1 / 16vw 50vh;
+            background: @multi(100, (repeating-conic-gradient(from @pn(-45deg, 45deg, 60deg,
+                            90deg, -90deg),
+                        @multi(50, (green, red,
+                                white, yellow))) @pn(0%, 100%) 100% / 400vmax 400vmax no-repeat));
+            filter: hue-rotate(180deg);
+            background-blend-mode: difference;
+        );
+}

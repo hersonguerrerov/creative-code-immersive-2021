@@ -1,4 +1,5 @@
 div {
+    position: relative;
     display: inline-block;
     margin: auto;
     padding-left: 5%;

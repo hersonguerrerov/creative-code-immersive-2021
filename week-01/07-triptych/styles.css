@@ -1,0 +1,31 @@
+.strip {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pane {
+    display: inline-block;
+}
+
+css-doodle {
+    --rule-grid-1: (@grid: 5 / 16vw 50vh;
+            --d: @p(45deg, -45deg, 135deg, -135deg);
+            --lg: linear-gradient(@var(--d), #60569e 50%, transparent 0);
+            background: @var(--lg) 0 0 / 100% 100%,
+            @var(--lg) 0 0 / 50% 50%;
+        );
+
+    --rule-grid-2: (@grid: 5 / 16vw 50vh;
+            background: #60569e;
+            transform: scale(@rand(.2, .9));
+        );
+
+    --rule-grid-3: (@grid: 5 / 16vw 50vh;
+            background: rgba(96, 86, 158, @rand(.9));
+            transition: .2s ease @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        );
+}
