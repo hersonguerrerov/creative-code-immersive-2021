@@ -1,0 +1,49 @@
+div {
+    display: inline-block;
+    margin: auto;
+    padding-left: 5%;
+}
+
+css-doodle {
+    --rule-grid-1: ( :doodle {
+            @grid: 1 / 90vw 33vh;
+
+            filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
+                seed="@r(1000)"
+                baseFrequency=".007"
+                numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
+                scale="240"
+                /> </filter> </svg>)
+        }
+
+        box-shadow: @m(100, (@r(100vw) @r(100vh) @r(10vmin, 20vmin) @r(20vmin) @p(#fff, #3F1282)));
+    );
+
+    --rule-grid-2: ( :doodle {
+            @grid: 1 / 90vw 33vh;
+
+            filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
+                seed="@r(1000)"
+                baseFrequency=".007"
+                numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
+                scale="240"
+                /> </filter> </svg>)
+        }
+
+        box-shadow: @m(100, (@r(100vw) @r(100vh) @r(10vmin, 20vmin) @r(20vmin) @p(#fff, #3F1282)));
+    );
+
+    --rule-grid-3: (:doodle {
+            @grid: 1 / 90vw 33vh;
+
+            filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
+                seed="@r(1000)"
+                baseFrequency=".007"
+                numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
+                scale="240"
+                /> </filter> </svg>)
+        }
+
+        box-shadow: @m(100, (@r(100vw) @r(100vh) @r(10vmin, 20vmin) @r(20vmin) @p(#fff, #3F1282)));
+    );
+}

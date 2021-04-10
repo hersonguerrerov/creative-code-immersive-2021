@@ -1,0 +1,58 @@
+div {
+    display: inline-block;
+    margin: auto;
+    padding-left: 5%;
+}
+
+css-doodle {
+    --rule-grid-1: ( :doodle {
+            @grid: 1 / 90vw 33vh;
+            background: linear-gradient(rebeccapurple, cyan);
+        }
+
+        :container {
+            filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
+                seed="@r(1000)"
+                baseFrequency=".007"
+                numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
+                scale="240"
+                /> </filter> </svg>)
+        }
+
+        background: @m(100, (radial-gradient(#fff 50%, transparent 0) @r(0, 100%) @r(0, 100%) / @r(50px) @r(100px) no-repeat));
+    );
+
+    --rule-grid-2: ( :doodle {
+            @grid: 1 / 90vw 33vh;
+            background: linear-gradient(rebeccapurple, cyan);
+        }
+
+        :container {
+            filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
+                seed="@r(1000)"
+                baseFrequency=".007"
+                numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
+                scale="240"
+                /> </filter> </svg>)
+        }
+
+        background: @m(100, (radial-gradient(#fff 50%, transparent 0) @r(0, 100%) @r(0, 100%) / @r(50px) @r(100px) no-repeat));
+    );
+
+    --rule-grid-3: (:doodle {
+            @grid: 1 / 90vw 33vh;
+            background: linear-gradient(rebeccapurple, cyan);
+        }
+
+        :container {
+            filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
+                seed="@r(1000)"
+                baseFrequency=".007"
+                numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
+                scale="240"
+                /> </filter> </svg>)
+        }
+
+        background: @m(100, (radial-gradient(#fff 50%, transparent 0) @r(0, 100%) @r(0, 100%) / @r(50px) @r(100px) no-repeat));
+    );
+}

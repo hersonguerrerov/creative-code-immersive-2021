@@ -1,0 +1,32 @@
+div {
+    display: inline-block;
+    margin: auto;
+    padding-left: 5%;
+}
+
+css-doodle {
+    --rule-grid-1: (@grid: 1 / 90vw 33vh;
+            background: @multi(100, (repeating-conic-gradient(from @pn(-45deg, 45deg, 60deg,
+                            90deg, -90deg),
+                        @multi(50, (green, red,
+                                white, yellow))) @pn(0%, 100%) 100% / 400vmax 400vmax no-repeat));
+            filter: hue-rotate(180deg);
+            background-blend-mode: difference;
+        );
+    --rule-grid-2: (@grid: 1 / 90vw 33vh;
+            --d: @p(45deg, -45deg, 135deg, -135deg);
+            --lg: linear-gradient(@var(--d), #60569e 50%, transparent 0);
+            background: @var(--lg) 0 0 / 100% 100%,
+            @var(--lg) 0 0 / 50% 50%;
+        );
+    --rule-grid-3: (@grid: 1 / 90vw 33vh;
+            background: #0a0c27;
+            background-image:@doodle(@grid: 6 / 100%;
+                @size: 4px;
+                font-size: 4px;
+                color: hsl(@r240, 30%, 50%);
+                box-shadow: @m3x5((calc(4em - @nx * 1em) calc(@ny * 1em) @p(@m3(currentColor), @m2(transparent)),
+                        calc(2em + @nx * 1em) calc(@ny * 1em) @lp ));
+            );
+        );
+}
