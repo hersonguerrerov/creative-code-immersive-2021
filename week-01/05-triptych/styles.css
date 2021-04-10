@@ -7,13 +7,14 @@ div {
 css-doodle {
     --rule-grid-1: ( :doodle {
             @grid: 1 / 90vw 33vh;
-            background: linear-gradient(rebeccapurple, cyan);
+            background: linear-gradient(#5c8c61, #fbd48c);
+            overflow: hidden;
         }
 
         :container {
             filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
                 seed="@r(1000)"
-                baseFrequency=".007"
+                baseFrequency=".5"
                 numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
                 scale="240"
                 /> </filter> </svg>)
@@ -24,13 +25,14 @@ css-doodle {
 
     --rule-grid-2: ( :doodle {
             @grid: 1 / 90vw 33vh;
-            background: linear-gradient(rebeccapurple, cyan);
+            background: linear-gradient(#fbd48c, #5c8c61);
+            overflow: hidden;
         }
 
         :container {
             filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
                 seed="@r(1000)"
-                baseFrequency=".007"
+                baseFrequency=".1"
                 numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
                 scale="240"
                 /> </filter> </svg>)
@@ -41,13 +43,14 @@ css-doodle {
 
     --rule-grid-3: (:doodle {
             @grid: 1 / 90vw 33vh;
-            background: linear-gradient(rebeccapurple, cyan);
+            background: linear-gradient(#5c8c61, #fbd48c);
+            overflow: hidden;
         }
 
         :container {
             filter: @svg-filter(<svg> <filter> <feTurbulence type="fractalNoise"
                 seed="@r(1000)"
-                baseFrequency=".007"
+                baseFrequency=".02"
                 numOctaves="10"/> <feDisplacementMap in="SourceGraphic"
                 scale="240"
                 /> </filter> </svg>)
