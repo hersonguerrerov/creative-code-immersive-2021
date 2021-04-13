@@ -117,82 +117,82 @@ css-doodle {
         }
 
         @nth(1) {
-            background-image: url("/loteria-images/el-alacran.png");
+            background-image: url("loteria-images/el-alacran.png");
             background-size: cover;
         }
 
         @nth(2) {
-            background-image: url("/loteria-images/la-luna.jpg");
+            background-image: url("loteria-images/la-luna.jpg");
             background-size: cover;
         }
 
         @nth(3) {
-            background-image: url("/loteria-images/el-ingeniero.png");
+            background-image: url("loteria-images/el-ingeniero.png");
             background-size: cover;
         }
 
         @nth(4) {
-            background-image: url("/loteria-images/el-paraguas.png");
+            background-image: url("loteria-images/el-paraguas.png");
             background-size: cover;
         }
 
         @nth(5) {
-            background-image: url("/loteria-images/el-corazon.png");
+            background-image: url("loteria-images/el-corazon.png");
             background-size: cover;
         }
 
         @nth(6) {
-            background-image: url("/loteria-images/la-sandia.png");
+            background-image: url("loteria-images/la-sandia.png");
             background-size: cover;
         }
 
         @nth(7) {
-            background-image: url("/loteria-images/el-barril.png");
+            background-image: url("loteria-images/el-barril.png");
             background-size: cover;
         }
 
         @nth(8) {
-            background-image: url("/loteria-images/el-camaron.png");
+            background-image: url("loteria-images/el-camaron.png");
             background-size: cover;
         }
 
         @nth(9) {
-            background-image: url("/loteria-images/el-dj.png");
+            background-image: url("loteria-images/el-dj.png");
             background-size: cover;
         }
 
         @nth(10) {
-            background-image: url("/loteria-images/el-gorrito.png");
+            background-image: url("loteria-images/el-gorrito.png");
             background-size: cover;
         }
 
         @nth(11) {
-            background-image: url("/loteria-images/la-bota.png");
+            background-image: url("loteria-images/la-bota.png");
             background-size: cover;
         }
 
         @nth(12) {
-            background-image: url("/loteria-images/la-estrella.png");
+            background-image: url("loteria-images/la-estrella.png");
             background-size: cover;
         }
 
         @nth(13) {
-            background-image: url("/loteria-images/el-mundo.png");
+            background-image: url("loteria-images/el-mundo.png");
             background-size: cover;
         }
 
         @nth(14) {
-            background-image: url("/loteria-images/el-violoncello.png");
+            background-image: url("loteria-images/el-violoncello.png");
             background-size: cover;
         }
 
         @nth(15) {
-            background-image: url("/loteria-images/el-nopal.png");
+            background-image: url("loteria-images/el-nopal.png");
             background-size: cover;
         }
 
         @nth(16) {
-            background-image: url("/loteria-images/el-papa.png");
+            background-image: url("loteria-images/el-papa.png");
             background-size: cover;
         }
 
@@ -216,7 +216,7 @@ css-doodle {
         background-blend-mode: difference;
 
         @nth(1) {
-            background-image: url("/loteria-images/el-alacran.png");
+            background-image: url("loteria-images/el-alacran.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -224,7 +224,7 @@ css-doodle {
         }
 
         @nth(2) {
-            background-image: url("/loteria-images/la-luna.jpg");
+            background-image: url("loteria-images/la-luna.jpg");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -232,7 +232,7 @@ css-doodle {
         }
 
         @nth(3) {
-            background-image: url("/loteria-images/el-ingeniero.png");
+            background-image: url("loteria-images/el-ingeniero.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -240,7 +240,7 @@ css-doodle {
         }
 
         @nth(4) {
-            background-image: url("/loteria-images/el-paraguas.png");
+            background-image: url("loteria-images/el-paraguas.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -248,7 +248,7 @@ css-doodle {
         }
 
         @nth(5) {
-            background-image: url("/loteria-images/el-corazon.png");
+            background-image: url("loteria-images/el-corazon.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -256,7 +256,7 @@ css-doodle {
         }
 
         @nth(6) {
-            background-image: url("/loteria-images/la-sandia.png");
+            background-image: url("loteria-images/la-sandia.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -264,7 +264,7 @@ css-doodle {
         }
 
         @nth(7) {
-            background-image: url("/loteria-images/el-barril.png");
+            background-image: url("loteria-images/el-barril.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -272,7 +272,7 @@ css-doodle {
         }
 
         @nth(8) {
-            background-image: url("/loteria-images/el-camaron.png");
+            background-image: url("loteria-images/el-camaron.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -280,7 +280,7 @@ css-doodle {
         }
 
         @nth(9) {
-            background-image: url("/loteria-images/el-dj.png");
+            background-image: url("loteria-images/el-dj.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -288,7 +288,7 @@ css-doodle {
         }
 
         @nth(10) {
-            background-image: url("/loteria-images/el-gorrito.png");
+            background-image: url("loteria-images/el-gorrito.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -296,7 +296,7 @@ css-doodle {
         }
 
         @nth(11) {
-            background-image: url("/loteria-images/el-soldado.png");
+            background-image: url("loteria-images/el-soldado.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -304,7 +304,7 @@ css-doodle {
         }
 
         @nth(12) {
-            background-image: url("/loteria-images/la-estrella.png");
+            background-image: url("loteria-images/la-estrella.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -312,7 +312,7 @@ css-doodle {
         }
 
         @nth(13) {
-            background-image: url("/loteria-images/el-mundo.png");
+            background-image: url("loteria-images/el-mundo.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -320,7 +320,7 @@ css-doodle {
         }
 
         @nth(14) {
-            background-image: url("/loteria-images/el-violoncello.png");
+            background-image: url("loteria-images/el-violoncello.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -328,7 +328,7 @@ css-doodle {
         }
 
         @nth(15) {
-            background-image: url("/loteria-images/el-nopal.png");
+            background-image: url("loteria-images/el-nopal.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
@@ -336,7 +336,7 @@ css-doodle {
         }
 
         @nth(16) {
-            background-image: url("/loteria-images/el-papa.png");
+            background-image: url("loteria-images/el-papa.png");
             background-size: cover;
             transition: .2s ease-in @rand(200ms);
             transform: rotate(@rand(360deg));
