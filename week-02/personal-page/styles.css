@@ -1,0 +1,347 @@
+body {
+    background: whitesmoke;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas:
+        "about beanscards loteria"
+    ;
+}
+
+#about {
+    grid-area: about;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#beanscards {
+    position: relative;
+    grid-area: beanscards;
+}
+
+#loteria {
+    position: relative;
+    grid-area: loteria;
+    z-index: -100;
+}
+
+#bean-1 {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+}
+
+#bean-2 {
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+    animation-name: move-bean-2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#bean-3 {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+}
+
+#bean-4 {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+}
+
+#bean-5 {
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+}
+
+#bean-6 {
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    animation-name: move-bean-6;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#bean-7 {
+    position: absolute;
+    bottom: 10%;
+    left: 35%;
+}
+
+#bean-8 {
+    position: absolute;
+    bottom: 12%;
+    left: 17%;
+    animation-name: move-bean-8;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-bean-8 {
+
+    to {
+        transform: translateX(400px) translateY(-260px)
+    }
+}
+
+@keyframes move-bean-6 {
+
+    to {
+        transform: translateX(650px) translateY(-750px)
+    }
+}
+
+@keyframes move-bean-2 {
+
+    to {
+        transform: translateX(850px) translateY(50px)
+    }
+}
+
+css-doodle {
+    --rule-grid-1: (:doodle {
+            @grid: 4 / 10vw;
+            @size: 35em 54em;
+            grid-gap: 10px;
+        }
+
+        :container {
+            @size: 35em 55em left: 100%;
+        }
+
+        @nth(1) {
+            background-image: url("/loteria-images/el-alacran.png");
+            background-size: cover;
+        }
+
+        @nth(2) {
+            background-image: url("/loteria-images/la-luna.jpg");
+            background-size: cover;
+        }
+
+        @nth(3) {
+            background-image: url("/loteria-images/el-ingeniero.png");
+            background-size: cover;
+        }
+
+        @nth(4) {
+            background-image: url("/loteria-images/el-paraguas.png");
+            background-size: cover;
+        }
+
+        @nth(5) {
+            background-image: url("/loteria-images/el-corazon.png");
+            background-size: cover;
+        }
+
+        @nth(6) {
+            background-image: url("/loteria-images/la-sandia.png");
+            background-size: cover;
+        }
+
+        @nth(7) {
+            background-image: url("/loteria-images/el-barril.png");
+            background-size: cover;
+        }
+
+        @nth(8) {
+            background-image: url("/loteria-images/el-camaron.png");
+            background-size: cover;
+        }
+
+        @nth(9) {
+            background-image: url("/loteria-images/el-dj.png");
+            background-size: cover;
+        }
+
+        @nth(10) {
+            background-image: url("/loteria-images/el-gorrito.png");
+            background-size: cover;
+        }
+
+        @nth(11) {
+            background-image: url("/loteria-images/la-bota.png");
+            background-size: cover;
+        }
+
+        @nth(12) {
+            background-image: url("/loteria-images/la-estrella.png");
+            background-size: cover;
+        }
+
+        @nth(13) {
+            background-image: url("/loteria-images/el-mundo.png");
+            background-size: cover;
+        }
+
+        @nth(14) {
+            background-image: url("/loteria-images/el-violoncello.png");
+            background-size: cover;
+        }
+
+        @nth(15) {
+            background-image: url("/loteria-images/el-nopal.png");
+            background-size: cover;
+        }
+
+        @nth(16) {
+            background-image: url("/loteria-images/el-papa.png");
+            background-size: cover;
+        }
+
+    );
+
+    --rule-glasses-at-night: (:doodle {
+            @grid: 4 / 10vw;
+            @size: 35em 54em;
+            grid-gap: 10px;
+        }
+
+        :container {
+            @size: 35em 55em left: 100%;
+            background-image: @svg(<svg viewBox="0 0 100 175"> @repeat50(<path stroke-width="@r.5"
+                    stroke="@p(#60569e, #e6437d)"
+                    d="M0, 0 L@r100, @r175"
+                    />) </svg>);
+        }
+
+        background: white;
+        background-blend-mode: difference;
+
+        @nth(1) {
+            background-image: url("/loteria-images/el-alacran.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(2) {
+            background-image: url("/loteria-images/la-luna.jpg");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(3) {
+            background-image: url("/loteria-images/el-ingeniero.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(4) {
+            background-image: url("/loteria-images/el-paraguas.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(5) {
+            background-image: url("/loteria-images/el-corazon.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(6) {
+            background-image: url("/loteria-images/la-sandia.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(7) {
+            background-image: url("/loteria-images/el-barril.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(8) {
+            background-image: url("/loteria-images/el-camaron.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(9) {
+            background-image: url("/loteria-images/el-dj.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(10) {
+            background-image: url("/loteria-images/el-gorrito.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(11) {
+            background-image: url("/loteria-images/el-soldado.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(12) {
+            background-image: url("/loteria-images/la-estrella.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(13) {
+            background-image: url("/loteria-images/el-mundo.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(14) {
+            background-image: url("/loteria-images/el-violoncello.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(15) {
+            background-image: url("/loteria-images/el-nopal.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+        @nth(16) {
+            background-image: url("/loteria-images/el-papa.png");
+            background-size: cover;
+            transition: .2s ease-in @rand(200ms);
+            transform: rotate(@rand(360deg));
+            clip-path: polygon(@rand(100%) 0, 100% @rand(100%), 0 @rand(100%));
+        }
+
+    );
+}
