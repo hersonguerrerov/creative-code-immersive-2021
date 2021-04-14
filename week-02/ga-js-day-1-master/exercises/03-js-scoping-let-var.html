@@ -1,0 +1,30 @@
+<!-- /exercises/03-js-scoping-let-var.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variable Scope - let vs var</title>
+    <script>
+      function sayHelloVar() {
+        if (true) {
+          var phraseA = "Hello";
+        }
+        console.log("[ sayHelloVar() ] " + phraseA); 
+      }
+
+      function sayHelloLet() {
+        if (true) {
+          let phraseB = "Hello";
+        }
+        console.log("[ sayHelloLet() ] " + phraseB); 
+      }
+      
+      // This works!
+      sayHelloVar();
+
+      // This won't work. Why?
+      sayHelloLet();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

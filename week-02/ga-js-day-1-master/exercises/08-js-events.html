@@ -1,0 +1,54 @@
+<!-- /exercises/08-js-events.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling</title>
+    <script>
+      // We want elem accessible to init() and any other functions below
+      let elem;
+      //window.onload = init; //not recommended
+      window.addEventListener('load', init);
+      
+      function init() {
+        elem = document.getElementById('interactive-div');
+        elem.addEventListener('click', function() {
+          elem.style.background = getRandomColor();
+        });
+      }
+
+      // A nice utility function for generating random hex values
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+    </script>
+
+    <style>
+      #interactive-div {
+        background: #8363bd;
+        position: relative;
+        width: 400px;
+        height: 400px;
+      }
+
+      #click-text {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="interactive-div">
+      <span id="click-text">Click to change my color!</span>
+    </div>
+  </body>
+</html>

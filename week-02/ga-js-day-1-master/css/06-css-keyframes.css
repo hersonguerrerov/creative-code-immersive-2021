@@ -1,0 +1,55 @@
+/* 06-css-keyframcs.css */
+body {
+  background: #0d0921;
+}
+
+div#anim-circles-container {
+  position: absolute;
+	width: 100%;
+	top: 50%;
+}
+
+div.anim-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.7;
+  position: absolute;
+}
+
+div#circle-1 {
+  -webkit-animation: my-animation 2s ease 0s infinite alternate;
+  animation: my-animation 2s ease 0s infinite alternate;
+}
+
+div#circle-2 {
+  -webkit-animation: my-animation 2s ease 0s infinite alternate;
+  animation: my-animation 2s linear 0s infinite alternate;
+}
+
+div#circle-3 {
+  -webkit-animation: my-animation 2s ease 0s infinite alternate;
+  animation: my-animation 2s ease-in 0s infinite alternate;
+}
+
+div#circle-4 {
+  -webkit-animation: my-animation 2s ease 0s infinite alternate;
+  animation: my-animation 2s ease-out 0s infinite alternate;
+}
+
+div#circle-5 {
+  -webkit-animation: my-animation 2s ease 0s infinite alternate;
+  animation: my-animation 5s ease-in-out 0s infinite alternate;
+}
+
+@keyframes my-animation {
+  0% {
+    background: #FFA500;
+    left: 10%;
+  }
+
+  100% {
+    background: #00caff;
+    left: 90%;
+  }
+}

@@ -1,0 +1,47 @@
+<!-- /exercises/07-js-objects.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+
+    <script>
+
+      let grammyWinner = {
+        name          : "Supernatural",
+        Artist        : "Santana",
+        age           : 23,
+        releaseDate   : "June 15, 1999",
+        grammyWins    : 9,
+
+        // example of a key being the name of a function
+        // and the value being the function definition
+        updateRecords : function(amt) {
+          // What is 'this'?
+          this.grammyWins += amt;
+        }
+      };
+
+      console.log("current grammyWins: " + grammyWinner.grammyWins);
+
+      grammyWinner.updateRecords(3);
+
+      console.log("updated grammyWins: " + grammyWinner.grammyWins);
+
+      // -----------------------------------
+      // logging objects to the console
+
+      // If you try this in the console you'll notice it won't work as
+      // expected, you'll get grammyWinner: [object Object]
+      console.log('grammyWinner: ' + grammyWinner);
+
+      // You can use JSON.Stringify() to print the contents as a string
+      console.log(JSON.stringify(grammyWinner));
+
+      // Or you can use this to get an expandable object in the dev tools
+      console.log('grammyWinner:', grammyWinner);
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

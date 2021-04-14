@@ -1,0 +1,51 @@
+<!-- /exercises/09-js-canvas-intro.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to HTML5 Canvas</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <canvas id="my-canvas"></canvas>
+
+    <script>
+      let canvasElem = document.getElementById('my-canvas');
+      let ctx = canvasElem.getContext('2d');
+
+      // define a width and height for the canvas
+      // you can also do this inline
+      canvasElem.width = 500;
+      canvasElem.height = 500;
+
+      // get the center of the canvas
+      let centerX = canvasElem.width / 2;
+      let centerY = canvasElem.width / 2;
+      let radius = 100;
+
+      draw();
+
+      function draw() {
+        // to set a background, we create a rect
+        // and fill it
+        ctx.fillStyle = "#520086";
+        ctx.fillRect(0, 0, canvasElem.width, canvasElem.height);
+
+        // draw a circle
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#cfcfff";
+        ctx.stroke();
+      }
+
+    </script>
+  </body>
+</html>

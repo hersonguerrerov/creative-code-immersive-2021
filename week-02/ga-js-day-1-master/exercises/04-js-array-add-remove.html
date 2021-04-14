@@ -1,0 +1,47 @@
+<!-- /exercises/04-js-array-add-remove.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays - Adding & Removing</title>
+
+    <script>
+      let fruits = [
+        "Granny Smith Apple", 
+        "Honeycrisp Apple", 
+        "Fiji Apple"  
+      ];
+
+      console.log("fruits before adding or removing: " + fruits);
+
+      // push() adds to the end of the array
+      fruits.push("Gala Apple");
+      console.log("fruits after push(): " + fruits);
+
+      // pop() removes from the end of an array
+      fruits.pop();
+      console.log("fruits after pop(): " + fruits);
+
+      // unshift adds to the beginning of an array
+      fruits.unshift("Jazz Apple");
+      console.log("fruits after unshift(): " + fruits);
+
+      // splice() can add and remove at specified indices
+      // here is an example of removing at an index
+      // say we want to remove "Honeycrisp Apple"
+      // first, we find its index (handy for lengthy arrays)
+      let index = fruits.indexOf("Honeycrisp Apple");
+
+      // if the array has "Honeycrisp Apple", we remove it
+      // if index is -1, it doesn't exist in the array
+      if (index > -1) {
+        fruits.splice(index, 1);
+      } else {
+        console.log("Honeycrisp Apple does not exist in the array.");
+      }
+      
+      console.log("fruits after splice(): " + fruits);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

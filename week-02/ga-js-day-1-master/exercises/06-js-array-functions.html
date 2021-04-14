@@ -1,0 +1,47 @@
+<!-- /exercises/06-js-array-functions.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays - filter() & map() functions</title>
+  </head>
+  <body>
+    <ul id="fruits-list"></ul>
+
+    <script>
+        let fruits = [
+          "Granny Smith Apple", 
+          "Honeycrisp Apple", 
+          "Fiji Apple", 
+          "Gala Apple", 
+          "Strawberry", 
+          "Blackberry",
+          "Raspberry", 
+          "Yellow Nectarine", 
+          "White Nectarine",
+          "Navel Orange"
+        ];
+  
+        // filter
+        let onlyApples = fruits.filter(function(fruit) {
+          return fruit.indexOf("Apple") > -1;
+        });
+  
+        console.log(onlyApples);
+  
+        // map
+        let elem = document.getElementById("fruits-list");
+        
+        let markup = ``;
+  
+        markup = fruits.map(function(fruit) {
+          return `
+            <li>${ fruit + " is yummy" }</li>
+          `;
+        }).join('');
+  
+        elem.innerHTML = markup;
+
+        console.log(editedFruits);
+      </script>
+  </body>
+</html>
