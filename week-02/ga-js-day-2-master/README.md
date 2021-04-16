@@ -1,0 +1,1 @@
+Code for Week 3, Javascript, Day 2

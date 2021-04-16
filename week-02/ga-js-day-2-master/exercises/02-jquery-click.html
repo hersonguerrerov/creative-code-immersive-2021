@@ -1,0 +1,24 @@
+<!-- /exercises/02-jquery-click.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery Click Handling</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <script src="../js/libs/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <button id="myBtn">Click to add a div</button>
+
+    <script>
+      $(document).ready(function() {
+        
+        $('#myBtn').click(function() {
+          let markup = `<div class="blue-div"><p>I was appended to the body with a click event!</p></div>`;
+
+          $('body').append(markup);
+        });
+      });  
+    </script>
+  </body>
+</html>

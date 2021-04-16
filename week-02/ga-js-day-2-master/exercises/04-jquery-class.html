@@ -1,0 +1,40 @@
+<!-- /exercises/04-jquery-class.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery - Updating Class Names</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <script src="../js/libs/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <button id="myBtn">Click to change colors + size</button>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        setupDivs();
+
+        $('#myBtn').click(function() {
+          // Notice that it needs to be in this order
+          $('div.custom-div-big').addClass("custom-div");
+          $('div.custom-div').removeClass("custom-div-big");
+        });
+      });
+      
+      // -------------------------------------------------------
+      function setupDivs() {
+        let markup = '';
+        let numDivs = 8;
+        
+        let singleDivMarkup = '<div class="custom-div-big"></div>';
+        for (let i = 0; i < numDivs; i++) {
+          markup += singleDivMarkup;
+        }
+
+        $('body').append(markup);
+      }  
+    </script>
+  </body>
+</html>

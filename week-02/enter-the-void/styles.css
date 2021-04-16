@@ -1,0 +1,6 @@
+svg {
+    background-image:
+        repeating-linear-gradient(#03A062 0 1px, transparent 1px 100%),
+        repeating-linear-gradient(90deg, #03A062 0 1px, transparent 1px 100%);
+    background-size: 71px 71px;
+}

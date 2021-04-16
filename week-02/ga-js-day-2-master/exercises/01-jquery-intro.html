@@ -1,0 +1,29 @@
+<!-- /exercises/01-jquery-intro.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intro to JQuery</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <!-- Alternatively, use CDN -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="../js/libs/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(testFunc);
+
+      function testFunc() {
+        console.log('We are calling the testFunc function!');
+      }
+
+      // When the document is loaded, we call this 'anonymous function'
+      // $(document).ready(function() {
+      //   console.log('We are calling an anonymous function!');
+
+      //   let markup = '<div id="my-div"><p>I was appended to the body with JQuery!</p></div>';
+      //   $('body').append(markup);
+      // });
+    </script>
+  </body>
+</html>

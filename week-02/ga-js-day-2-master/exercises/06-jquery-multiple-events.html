@@ -1,0 +1,52 @@
+<!-- /exercises/06-jquery-multiple-events.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQuery - Adding multiple events</title>
+    <link rel="stylesheet" href="../css/exercises.css">
+    <script src="../js/libs/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(function() {
+        setupDivs();
+
+        // add multiple events
+        // notice that we are passing an object to on()
+        $('.custom-div-big').on({
+          click: function() {
+            $(this).css("background", getRandomColor())
+          },
+
+          dblclick: function() {
+            $(this).css("background", "black");
+          }
+        })
+      });
+        
+      // -------------------------------------------------------
+      function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      // -------------------------------------------------------
+      function setupDivs() {
+        let markup = '';
+        let numDivs = 6;
+
+        let singleDivMarkup = '<div class="custom-div-big"></div>';
+        for (let i = 0; i < numDivs; i++) {
+          markup += singleDivMarkup;
+        }
+
+        $('body').append(markup);
+      }  
+    </script>
+  </body>
+</html>

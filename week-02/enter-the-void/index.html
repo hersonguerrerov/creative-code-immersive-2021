@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Enter The Void</title>
+	<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <div class="svg-attributes-demo">
+	  <svg width="400" height="400" viewbox="0 0 128 128">
+		<defs>
+			<pattern id="img1" patternUnits="userSpaceOnUse" width="200" height="200">
+			  <image href="void.jpg" x="0" y="0" width="200" height="200" />
+			</pattern>
+		  </defs>
+		  <filter id="displacementFilter">
+			  <feTurbulence 
+			  	type="turbulence" 
+				numOctaves="2"
+				result="turbulence"
+				style="transform: scale(1);">
+				</feTurbulence>
+			<feDisplacementMap 
+				in2="turbulence" 
+				in="SourceGraphic" 
+				xChannelSelector="R"
+				yChannelSelector="G">
+			</feDisplacementMap>
+		  </filter>
+		  <polygon fill="url(#img1)" style="filter: url(#displacementFilter);
+		  				  transform: scale(1);">
+		  </polygon>
+	  </svg>
+  </div>
+  <script src="node_modules/animejs/lib/anime.js"></script>
+  <script>
+	var polyEl = document.querySelector('.svg-attributes-demo polygon');
+	var feTurbulenceEl = document.querySelector('feTurbulence');
+	var feDisplacementMap = document.querySelector('feDisplacementMap');
+
+	polyEl.setAttribute('points', '64 68.64 8.574 100 63.446 67.68 64 4 64.554 67.68 119.426 100');
+	feTurbulenceEl.setAttribute('baseFrequency', '.05');
+	feDisplacementMap.setAttribute('scale', '15');
+	anime({
+		targets: ['.svg-attributes-demo polygon', 'feTurbulence', 'feDisplacementMap'],
+		points: '64 128 8.574 96 8.574 32 64 0 119.426 32 119.426 96',
+		baseFrequency: 0,
+		scale: 1,
+		loop: true,
+		direction: 'alternate',
+		easing: 'easeInOutExpo'
+	});
+  </script>
+</body>
+</html>
