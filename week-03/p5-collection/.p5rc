@@ -1,4 +1,14 @@
 {
   "name": "p5-collection",
-  "projects": []
+  "projects": [
+    "01-wip",
+    "02-wip-scramble",
+    "03-wip-scanlines",
+    "04-wip-warp",
+    "05-wip-pixelBurn",
+    "06-wip-noiseEffect",
+    "07-wip-scanner",
+    "08-wip-jpgDegrade",
+    "09-final"
+  ]
 }
